@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic Awareness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Plastic Awareness</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="map.html">Report Pollution</a></li>
+                <li><a href="awareness.html">Awareness</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="forum.html">Discussion</a></li>
+                <li><a href="rewards.html">Rewards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Welcome to Plastic Awareness</h2>
+        <p>Join us in the fight against plastic pollution.</p>
+        <a class="btn-primary" href="map.html">Report a Pollution</a>
+    </section>
+    <footer>
+        <p>&copy; 2024 Plastic Awareness. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Pollution</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Report Plastic Pollution</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="map.html">Report Pollution</a></li>
+                <li><a href="awareness.html">Awareness</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="forum.html">Discussion</a></li>
+                <li><a href="rewards.html">Rewards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Map</h2>
+        <div id="map"></div>
+    </section>
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        L.marker([51.5, -0.09]).addTo(map)
+            .bindPopup('Plastic pollution detected here.')
+            .openPopup();
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awareness and Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Awareness and Solutions</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="map.html">Report Pollution</a></li>
+                <li><a href="awareness.html">Awareness</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="forum.html">Discussion</a></li>
+                <li><a href="rewards.html">Rewards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Learn About Plastics</h2>
+        <article>
+            <h3>What are Plastics?</h3>
+            <p>Plastics are synthetic materials that pose a significant environmental threat. They can come from a variety of sources including the breakdown of larger plastic items and microbeads in personal care products.</p>
+        </article>
+        <article>
+            <h3>Solutions</h3>
+            <p>To combat plastic pollution, consider reducing plastic use, supporting policies that limit plastic production, and participating in clean-up initiatives.</p>
+        </article>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/your_video_id" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Plastic Awareness. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Clean-up Events</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="map.html">Report Pollution</a></li>
+                <li><a href="awareness.html">Awareness</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="forum.html">Discussion</a></li>
+                <li><a href="rewards.html">Rewards</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Upcoming Events</h2>
+        <p>Join us in our upcoming events to clean up the environment.</p>
+        <ul>
+            <li><strong>Beach Cleanup:</strong> August 30, 2024 - Help us clean up the local beaches.</li>
+            <li><strong>River Cleanup:</strong> September 10, 2024 - Join us to clean the riverbanks.</li>
+            <li><strong>Park Cleanup:</strong> September 20, 2024 - Contribute to keeping the parks clean.</li>
+        </ul>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="event">Select Event:</label>
+            <select id="event" name="event">
+                <option value="beach-cleanup">Beach Cleanup</option>
+                <option value="river-cleanup">River Cleanup</option>
+                <option value="park-cleanup">Park Cleanup</option>
+            </select>
+            <input type="submit" value="Register">
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Plastic Awareness. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Forum</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Discussion Forum</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="map.html">Report Pollution</a></li>
+                <li><a href="awareness.html">Awareness</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="forum.html">Discussion</a></li>
+                <li><a href="rewards.html">Rewards</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Discussion Forum</h2>
+        <p>Join the conversation about plastic pollution. Share your ideas, solutions, and experiences.</p>
+        <!-- Discussion Threads -->
+        <div class="threads">
+            <div class="thread">
+                <h3>What are the best ways to reduce plastic use in daily life?</h3>
+                <p>Join the discussion on practical tips and tricks to minimize plastic consumption.</p>
+            </div>
+            <div class="thread">
+                <h3>How can communities collaborate to combat plastic pollution?</h3>
+                <p>Share your thoughts on community efforts and initiatives that can make a difference.</p>
+            </div>
+            <div class="thread">
+                <h3>Innovative solutions for plastic cleanup</h3>
+                <p>Discuss new technologies and methods that can help in cleaning up plastic waste.</p>
+            </div>
+        </div>
+        <!-- Add a Post Form -->
+        <div class="post-form">
+            <h3>Share Your Thoughts</h3>
+            <form action="/submit-post" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="post-title">Post Title:</label>
+                <input type="text" id="post-title" name="post-title" required>
+                <label for="post-content">Your Message:</label>
+                <textarea id="post-content" name="post-content" rows="5" required></textarea>
+                <input type="submit" value="Post">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Plastic Awareness. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rewards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rewards</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="map.html">Report Pollution</a></li>
+                <li><a href="awareness.html">Awareness</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="forum.html">Discussion</a></li>
+                <li><a href="rewards.html">Rewards</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Earn Rewards</h2>
+        <p>Participate in our activities and earn points to redeem rewards.</p>
+        <div class="rewards-list">
+            <p>100 points - English A1 Courses</p>
+            <p>200 points - English B1 Courses</p>
+            <p>500 points - English B2 Courses</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Plastic Awareness. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="map.html">Report Pollution</a></li>
+                <li><a href="awareness.html">Awareness</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="forum.html">Discussion</a></li>
+                <li><a href="rewards.html">Rewards</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Contact Us for Plastic Recycling</h2>
+        <p>Get in touch with us for information on plastic recycling and how you can contribute.</p>
+        <form action="/submit-contact" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Plastic Awareness. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
